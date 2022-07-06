@@ -77,6 +77,7 @@ public class ConfigHandler {
 
 		// Multi machines
 		enableMultiblock_AlloyBlastSmelter = config.getBoolean("enableMultiblockAlloyBlastSmelter", "gregtech", true, "Required to smelt most high tier materials from GT++. Also smelts everything else to molten metal.");
+		enableMultiblock_BlazingBlastSmelter = config.getBoolean("enableMultiblockBlazingBlastSmelter", "gregtech", true, "A larger, more advanced version of the Alloy Blast Furnace. Has less constraints and more complexity.");
 		enableMultiblock_IndustrialCentrifuge = config.getBoolean("enableMultiblockIndustrialCentrifuge", "gregtech", true, "Spin, Spin, Spiiiin.");
 		enableMultiblock_IndustrialCokeOven = config.getBoolean("enableMultiblockIndustrialCokeOven", "gregtech", true, "Pyro Oven Alternative, older, more realistic, better.");
 		enableMultiblock_IndustrialElectrolyzer = config.getBoolean("enableMultiblockIndustrialElectrolyzer", "gregtech", true, "Electrolyzes things with extra bling factor.");

@@ -202,7 +202,10 @@ public enum GregtechItemList implements GregtechItemContainer {
 	//ABS
 	Industrial_AlloyBlastSmelter,
 	Casing_Coil_BlastSmelter, 
-	Casing_BlastSmelter,	
+	Casing_BlastSmelter,
+
+	//Mega ABS/Blazing Blast Smelter
+	Industrial_MegaAlloyBlastSmelter,
 
 	//Industrial Electrolyzer
 	Industrial_Electrolyzer,

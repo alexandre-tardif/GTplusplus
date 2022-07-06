@@ -62,11 +62,11 @@ public class GregtechMetaTileEntity_MegaABS extends GregtechMeta_MultiBlockBase<
     protected GT_Multiblock_Tooltip_Builder createTooltip() {
         GT_Multiblock_Tooltip_Builder tt = new GT_Multiblock_Tooltip_Builder();
         tt.addMachineType(getMachineType())
-                .addInfo("Controller Block for the Alloy Blast Smelter")
-                .addInfo("20% Faster than the Electric Blast Furnace")
+                .addInfo("Controller Block for the Blazing Blast Smelter")
+                .addInfo("Large version of the Alloy Blast Smelter")
                 .addInfo("Allows Complex GT++ alloys to be created")
-                .addInfo("Accepts only one Energy Hatch")
-                .addInfo("Circuit for recipe goes in the Input Bus or GUI slot")
+                .addInfo("The tier of the Energy Hatches decides which recipes can be run")
+                .addInfo("Each Input Bus can have a different circuit to run specific recipes")
                 .addPollutionAmount(getPollutionPerSecond(null))
                 .addSeparator()
                 .beginStructureBlock(3, 4, 3, true)
@@ -88,10 +88,27 @@ public class GregtechMetaTileEntity_MegaABS extends GregtechMeta_MultiBlockBase<
         if (STRUCTURE_DEFINITION == null) {
             STRUCTURE_DEFINITION = StructureDefinition.<GregtechMetaTileEntity_MegaABS>builder()
                     .addShape(mName, transpose(new String[][]{
-                            {"CCC", "CCC", "CCC"},
-                            {"HHH", "H-H", "HHH"},
-                            {"HHH", "H-H", "HHH"},
-                            {"C~C", "CCC", "CCC"},
+                            {"               ", "               ", "               ", "               ", "      HHH      ", "     HHHHH     ", "    HHHHHHH    ", "    HHHHHHH    ", "    HHHHHHH    ", "     HHHHH     ", "      HHH      ", "               ", "               ", "               ", "               "},
+                            {"               ", "               ", "               ", "               ", "      HHH      ", "     H---H     ", "    H-----H    ", "    H-----H    ", "    H-----H    ", "     H---H     ", "      HHH      ", "               ", "               ", "               ", "               "},
+                            {"               ", "               ", "               ", "               ", "      HHH      ", "     H---H     ", "    H-----H    ", "    H-----H    ", "    H-----H    ", "     H---H     ", "      HHH      ", "               ", "               ", "               ", "               "},
+                            {"               ", "               ", "               ", "               ", "               ", "      HHH      ", "     H---H     ", "     H---H     ", "     H---H     ", "      HHH      ", "               ", "               ", "               ", "               ", "               "},
+                            {"               ", "               ", "               ", "               ", "               ", "               ", "      HHH      ", "      H-H      ", "      HHH      ", "               ", "               ", "               ", "               ", "               ", "               "},
+                            {"               ", "               ", "               ", "               ", "               ", "               ", "      HHH      ", "      H-H      ", "      HHH      ", "               ", "               ", "               ", "               ", "               ", "               "},
+                            {"               ", "               ", "               ", "               ", "               ", "               ", "      HHH      ", "      H-H      ", "      HHH      ", "               ", "               ", "               ", "               ", "               ", "               "},
+                            {"               ", "               ", "               ", "               ", "               ", "               ", "      HHH      ", "      H-H      ", "      HHH      ", "               ", "               ", "               ", "               ", "               ", "               "},
+                            {"               ", "               ", "               ", "               ", "               ", "               ", "      HHH      ", "      H-H      ", "      HHH      ", "               ", "               ", "               ", "               ", "               ", "               "},
+                            {"               ", "               ", "               ", "               ", "               ", "      HHH      ", "     H---H     ", "     H---H     ", "     H---H     ", "      HHH      ", "               ", "               ", "               ", "               ", "               "},
+                            {"               ", "               ", "               ", "               ", "      HHH      ", "     H---H     ", "    H-----H    ", "    H-----H    ", "    H-----H    ", "     H---H     ", "      HHH      ", "               ", "               ", "               ", "               "},
+                            {"               ", "               ", "               ", "     HHHHH     ", "    H-----H    ", "   H-------H   ", "   H-------H   ", "   H-------H   ", "   H-------H   ", "   H-------H   ", "    H-----H    ", "     HHHHH     ", "               ", "               ", "               "},
+                            {"               ", "               ", "    HHHHHHH    ", "    H-----H    ", "   H-------H   ", "  H---------H  ", "  H---------H  ", "  H---------H  ", "  H---------H  ", "  H---------H  ", "   H-------H   ", "    H-----H    ", "    HHHHHHH    ", "               ", "               "},
+                            {"               ", "    HHHHHHH    ", "   H-------H   ", "  H---------H  ", "  H---------H  ", " H-----------H ", " H-----------H ", " H-----------H ", " H-----------H ", " H-----------H ", "  H---------H  ", "  H---------H  ", "   H-------H   ", "    HHHHHHH    ", "               "},
+                            {"     HHHHH     ", "   H-------H   ", "  H---------H  ", " H-----------H ", " H-----------H ", "H-------------H", "H-------------H", "H-------------H", "H-------------H", "H-------------H", " H-----------H ", " H-----------H ", "  H---------H  ", "   H-------H   ", "     HHHHH     "},
+                            {"     HHHHH     ", "   H-------H   ", "  H---------H  ", " H-----------H ", " H-----------H ", "H-------------H", "H-------------H", "H-------------H", "H-------------H", "H-------------H", " H-----------H ", " H-----------H ", "  H---------H  ", "   H-------H   ", "     HHHHH     "},
+                            {"     HHHHH     ", "   H-------H   ", "  H---------H  ", " H-----------H ", " H-----------H ", "H-------------H", "H-------------H", "H-------------H", "H-------------H", "H-------------H", " H-----------H ", " H-----------H ", "  H---------H  ", "   H-------H   ", "     HHHHH     "},
+                            {"     HHHHH     ", "   H-------H   ", "  H---------H  ", " H-----------H ", " H-----------H ", "H-------------H", "H-------------H", "H-------------H", "H-------------H", "H-------------H", " H-----------H ", " H-----------H ", "  H---------H  ", "   H-------H   ", "     HHHHH     "},
+                            {"     HHHHH     ", "   H-------H   ", "  H---------H  ", " H-----------H ", " H-----------H ", "H-------------H", "H-------------H", "H-------------H", "H-------------H", "H-------------H", " H-----------H ", " H-----------H ", "  H---------H  ", "   H-------H   ", "     HHHHH     "},
+                            {"     HH~HH     ", "   H-------H   ", "  H---------H  ", " H-----------H ", " H-----------H ", "H-------------H", "H-------------H", "H-------------H", "H-------------H", "H-------------H", " H-----------H ", " H-----------H ", "  H---------H  ", "   H-------H   ", "     HHHHH     "},
+                            {"     CCCCC     ", "   CCCCCCCCC   ", "  CCCCCCCCCCC  ", " CCCCCCCCCCCCC ", " CCCCCCCCCCCCC ", "CCCCCCCCCCCCCCC", "CCCCCCCCCCCCCCC", "CCCCCCCCCCCCCCC", "CCCCCCCCCCCCCCC", "CCCCCCCCCCCCCCC", " CCCCCCCCCCCCC ", " CCCCCCCCCCCCC ", "  CCCCCCCCCCC  ", "   CCCCCCCCC   ", "     CCCCC     "}
                     }))
                     .addElement(
                             'C',
@@ -126,7 +143,7 @@ public class GregtechMetaTileEntity_MegaABS extends GregtechMeta_MultiBlockBase<
     @Override
     public boolean checkMachine(IGregTechTileEntity aBaseMetaTileEntity, ItemStack aStack) {
         mCasing = 0;
-        return checkPiece(mName, 1, 3, 0) && mCasing >= 10 && mEnergyHatches.size() == 1 && checkHatch();
+        return checkPiece(mName, 1, 3, 0) && mCasing >= 10 && checkHatch();
     }
 
     public final boolean addAlloyBlastSmelterList(IGregTechTileEntity aTileEntity, int aBaseCasingIndex) {

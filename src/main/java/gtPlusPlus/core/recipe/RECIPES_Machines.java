@@ -82,6 +82,8 @@ public class RECIPES_Machines {
 	public static ItemStack RECIPE_IndustrialBlastSmelterController;
 	public static ItemStack RECIPE_IndustrialBlastSmelterFrame;
 	public static ItemStack RECIPE_IndustrialBlastSmelterCoil;
+	public static ItemStack RECIPE_IndustrialMegaBlastSmelterController;
+
 	//Industrial Sieve
 	public static ItemStack RECIPE_IndustrialSieveController;
 	public static ItemStack RECIPE_IndustrialSieveFrame;
@@ -1764,6 +1766,7 @@ public class RECIPES_Machines {
 				RECIPE_IndustrialBlastSmelterController = GregtechItemList.Industrial_AlloyBlastSmelter.get(1);
 				RECIPE_IndustrialBlastSmelterFrame = GregtechItemList.Casing_BlastSmelter.get(Casing_Amount);
 				RECIPE_IndustrialBlastSmelterCoil = GregtechItemList.Casing_Coil_BlastSmelter.get(Casing_Amount);
+				RECIPE_IndustrialMegaBlastSmelterController = GregtechItemList.Industrial_MegaAlloyBlastSmelter.get(1);
 
 				//Blast Smelter
 				RecipeUtils.addShapedGregtechRecipe(
@@ -1783,6 +1786,12 @@ public class RECIPES_Machines {
 						"frameGtStaballoy", CI.gearboxCasing_Tier_3, "frameGtStaballoy",
 						"plateStaballoy", "plateStaballoy", "plateStaballoy",
 						RECIPE_IndustrialBlastSmelterCoil);
+				//Mega Blast Smelter (Blazing Blast Smelter Controller)
+				RecipeUtils.addShapedGregtechRecipe(
+						"plateZirconiumCarbide", CI.circuitTier4, "plateZirconiumCarbide",
+						cableTier4, EV_MACHINE_AlloySmelter, cableTier4,
+						"plateZirconiumCarbide", CI.circuitTier3, "plateZirconiumCarbide",
+						RECIPE_IndustrialMegaBlastSmelterController);
 			}
 
 			if (CORE.ConfigSwitches.enableMultiblock_MatterFabricator){

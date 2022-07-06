@@ -232,6 +232,7 @@ public class CORE {
 
 		//Multiblocks
 		public static boolean enableMultiblock_AlloyBlastSmelter = true;
+		public static boolean enableMultiblock_BlazingBlastSmelter = true;
 		public static boolean enableMultiblock_IndustrialCentrifuge = true;
 		public static boolean enableMultiblock_IndustrialCokeOven = true;
 		public static boolean enableMultiblock_IndustrialElectrolyzer = true;

@@ -110,6 +110,7 @@ public class COMPAT_HANDLER {
 			GregtechIndustrialWiremill.run();
 			GregtechIndustrialMassFabricator.run();
 			GregtechIndustrialBlastSmelter.run();
+			GregtechMegaABS.run();
 			GregtechSolarGenerators.run();
 			GregtechPowerSubStation.run();
 			GregtechDehydrator.run();
